@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Profile</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+
+        </style>
+    </head>
+
+    <body>
+        <!-- <%- include ('./header') %> -->
+        <div class="container">
+          <div class="btncls">
+            <div >
+                <button class="btn"><a href="/edit/<%= user[0]._id %>">EDIT</a></button>
+            </div>
+            <div >
+                <button class="btn"><a href="/delete/<%= user[0]._id %>">DELETE</a></button>
+
+            </div>
+          </div>
+           
+                <div><h3 id="head">Hello <%= user[0].name %></h3></div>
+                <!-- <p>Here Is your Data</p> -->
+                    <div>
+                    <img src="data:userimg/<%=user[0].userimg.contentType%>;base64,
+                 <%=user[0].userimg.data.toString('base64')%> " height="150px" width="150px" class="usrimg"></div>
+                   
+
+                        <div>
+                        <table>
+                            <tr>
+                                <td class="tag">NAME:</td>
+                                <td>
+                                    <%= user[0].name%>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tag">USERNAME:</td>
+                                <td>
+                                    <%= user[0].username%>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tag"> EMAIL:</td>
+                                <td>
+                                    <%= user[0].email%>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tag">PASSWORD:</td>
+                                <td>
+                                    <%= user[0].password%>
+                                </td>
+                            </tr>
+                        </table>
+
+                    
+
+
+                </div>
+            
+           
+        </div>
+    </body>
+
+    </html>
+</body>
+
+</html>
